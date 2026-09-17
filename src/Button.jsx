@@ -1,17 +1,16 @@
 
+function Button() {
+    const handleClick = () => console.log("OUCH!");
 
-function Button(){
-    const styles={
-       
-    backgroundColor:'rgba(0, 0, 255, 0.5)',
-    padding:'10px 20px' ,
-    color:'white',
-    borderRadius: '5px',
-    border:'none',
-    cursor:'pointer',
+    const handleClick2 = (name) => {
+        console.log(`${name} stop clicking me`);
+    };
 
-
-    }
-    return(<button style={styles}>Click Me</button>)
+    return (
+        <button onClick={() => handleClick2("Esther")}>
+            Click me 😀
+        </button>
+    );
 }
-export default Button
+
+export default Button;

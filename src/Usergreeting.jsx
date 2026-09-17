@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 
-function Usergreeting(props) {
+function Usergreeting({
+    isLoggedIn = false,
+    username = "Guest"
+}) {
     const welcomeMessage = (
         <h2 className="welcome-message">
-            Welcome {props.username}
+            Welcome {username}
         </h2>
     );
 
@@ -13,17 +16,12 @@ function Usergreeting(props) {
         </h2>
     );
 
-    return props.isLoggedIn ? welcomeMessage : loginPrompt;
+    return isLoggedIn ? welcomeMessage : loginPrompt;
 }
 
 Usergreeting.propTypes = {
     isLoggedIn: PropTypes.bool,
     username: PropTypes.string
-};
-
-Usergreeting.defaultProps = {
-    isLoggedIn: false,
-    username: "Guest"
 };
 
 export default Usergreeting;

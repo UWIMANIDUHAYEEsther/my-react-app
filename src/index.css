@@ -1,5 +1,18 @@
-.stud{
-    border:2px solid pink;
-    padding:20px;
-    border-radius: 5px;
+.welcome-message{
+
+    font-size:2.5em;
+    padding:10px;
+    border-radius:5px;
+    color:white;
+    background-color: rgba(172, 255, 47, 0.68);
+    margin:0;
+}
+.login-prompt{
+    font-size:2.5em;
+    padding:10px;
+    border-radius:5px;
+    color:white;
+    background-color: rgba(255, 192, 203, 0.758);
+    margin:0;
+
 }

@@ -2,8 +2,9 @@
 import List from './List.jsx'
 
 function App(){
+    // const fruits=[]
       const fruits = [
-        { id: 1, name: "Orange", calories: 95 },
+        { id: 1, name: "Orange", calories: 'hello' },
         { id: 2, name: "Apple", calories: 120 },
         { id: 3, name: "Banana", calories: 45 },
         { id: 4, name: "Coconut", calories: 75 },
@@ -18,13 +19,16 @@ function App(){
     ];
     return(
        <>
-        <List items={fruits} category='fruits'/>
-        <List items={vegetables} category='vegetables'/>
+        {fruits.length >0 && <List items={fruits} category='fruits'/>}
+        {vegetables.length>0 && <List items={vegetables} category='vegetables'/>}
        
        </>
         
     )
    
 }
+
+
+
 
 export default App

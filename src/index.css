@@ -1,26 +1,40 @@
-.counter-container{
-    text-align: center;
-    font-family: Arial,  sans-serif;
+body{
+font-family:Arial, sans-serif;
 }
-.counter-display{
-margin-top: 0;
-margin-bottom: 50px;
-font-size: 10em;
-
+.color-picker-component{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.h1{
+    margin:50px;
+    font-size:3rem;
+}
+.color-display{
+    width:300px;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:5px solid rgb(89, 132, 24);
+    border-radius: 25px;
+    margin-bottom: 25;
 
 }
-.counter-button{
-
-    width:150px;
-    height:50px;
-    font-weight: bold;
-    margin:0px 10px;
+.color-display p{
+ color:aquamarine;
+ font-size:2em;
+ text-align: center;
+}
+label{
     font-size: 1.5em;
-    background-color: rgba(0, 0, 255, 0.354);
-    border:none;
-    border-radius: 5px;
-    cursor:pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-.counter-button:hover{
-  background-color: rgba(0, 0, 255, 0.075);
+input[type='color']{
+width:75px;
+height:50px;
+border-radius: 3px;
+border: 5px solid grey;
+padding: 5px;
 }

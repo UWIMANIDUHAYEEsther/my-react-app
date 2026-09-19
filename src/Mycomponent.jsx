@@ -3,27 +3,55 @@
 
 function Mycomponent(){
 
-const  [name,setname]=useState('Guest')
-const [age,setage]=useState(0)
-const[isEmployed,setisEmployed]=useState(false)
-const updateName=()=>{
-    setname('Esther')
-}
-const incrementAge=()=>{
-    setage(age+1)
-}
-const toggleEmployedStatus=() =>{
+ const [name,setname]=useState('')
+ const [quantity,setquantity]=useState(1)
+ const[comment,setcomment]=useState('')
+ const [payment,setpayment]=useState('')
+ const[shipping,setshipping]=useState('')
+ function handleonclickevent(event){
+    setname(event.target.value)
 
-    setisEmployed(!isEmployed)
-}
+ }
+ function handlequantitychange(event){
+    setquantity(event.target.value)
+ }
+ function commentchange(event){
+    setcomment(event.target.value);
+ }
+ function paymenthandle(event){
+    setpayment(event.target.value);
+
+ }
+ function handleshipping(event){
+    setshipping(event.target.value);
+ }
 return (<div>
-       <p>Name:{name}</p>
-       <button onClick={updateName}>Set Name</button>
-        <p>Age:{age}</p>
-       <button onClick={incrementAge}>Increment Age</button>
-       <p>Is employed:{isEmployed ?'Yes':'No'}</p>
-       <button onClick={toggleEmployedStatus}>Toggle Status</button>
-</div>)
+<input value={name} onChange={ handleonclickevent}>
+</input>
+<p>Name: {name} </p>
+<input value={name} onChange={handlequantitychange}type='number' ></input>
+
+<p>Quantity:{quantity} </p>
+<textarea value={comment} onChange={commentchange} placeholder='Enter delivery instruction '/>
+<p>Comment:{comment}</p>
+<select value={payment} onChange={ paymenthandle}>
+    <option value=''>Select an option</option>
+    <option value='Visa'>Visa </option>
+    <option value='Mastercard'>Mastercard</option>
+    <option value='Giftcard'>Giftcard</option>
+</select>
+<p>Payment:{payment}</p>
+<label>
+    <input type='radio' value='Pick Up' checked={shipping==='pick up'} onChange={handleshipping}></input>
+    Pick Up
+</label><br></br>
+<label>
+    <input type='radio' value='Delivery' checked={shipping==='Delivery'} onChange={handleshipping}></input>
+    Delivery
+</label>
+<p>Shipping:{shipping}</p>
+</div>
+)
 
 }
 export default Mycomponent

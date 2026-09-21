@@ -1,11 +1,11 @@
 
-import Counter from './Counter.jsx'
+import Car from './Car.jsx'
 
 function App(){
  
     return(
              <>
-             <Counter/>
+             <Car/>
              
              </>
         

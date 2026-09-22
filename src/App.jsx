@@ -1,11 +1,11 @@
 
-import Car from './Car.jsx'
+import Todolist from './Todolist.jsx'
 
 function App(){
  
     return(
              <>
-             <Car/>
+             <Todolist/>
              
              </>
         

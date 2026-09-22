@@ -1,11 +1,11 @@
 
-import Todolist from './Todolist.jsx'
+import Data from "./Data.jsx"
 
 function App(){
  
     return(
              <>
-             <Todolist/>
+             <Data/>
              
              </>
         

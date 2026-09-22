@@ -11,6 +11,9 @@ function Data(){
     console.log('EVENT LISTENER REMOVED')
   }
   },[])
+  useEffect(()=>{
+    document.title=`Resize:${width} x ${height}`
+  },[width,height])
  function handlerResize(){
   setWidth(window.innerWidth);
   setHeight(window.innerHeight);

@@ -20,10 +20,13 @@ function DigitalClock(){
   const seconds=time.getSeconds();
   const meridiam=hours>=12 ?'PM' :'Am';
   hours=hours % 12 || 12;
- return`${hours}:${minutes}:${seconds} ${meridiam}`;
+ return`${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiam}`;
 
     }
- 
+    function padZero(number){
+        return(number<10?'0':'')+number;
+        
+    }
 return(
     <div className='container-clock'>
     <div className='clock'>

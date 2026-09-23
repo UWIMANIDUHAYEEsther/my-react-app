@@ -1,11 +1,11 @@
 
-import Data from "./Data.jsx"
+import DigitalClock from "./DigitalClock.jsx"
 
 function App(){
  
     return(
              <>
-             <Data/>
+             <DigitalClock/>
              
              </>
         

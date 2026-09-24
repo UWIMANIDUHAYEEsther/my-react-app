@@ -1,11 +1,13 @@
 
-import Mycomp from "./Mycomp.jsx"
+import Stopwatch from "./Stopwatch.jsx"
 
 function App(){
  
     return(
              <>
-             <Mycomp/>
+             <Stopwatch/>
+              <Stopwatch/>
+               <Stopwatch/>
               
              
              </>
